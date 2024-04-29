@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className=" bg-neutral-100 dark:bg-gray-900 py-3 dark: text-white fixed w-full top-0 z-20"
+      className="bg-neutral-100 dark:bg-gray-900 py-3 dark:text-white fixed w-full top-0 z-20"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between">
@@ -27,17 +27,15 @@ export default function Navbar() {
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden"></div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img
-                className="h-8 w-auto"
-                src= {applogo}
-                alt="Your Company"
-              />
+              <img className="h-8 w-auto" src={applogo} alt="Your Company" />
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-           {currentUser && <h5 className="mr-2 capitalize">{currentUser?.displayName} </h5>}
+            {currentUser && (
+              <h5 className="mr-2 capitalize">{currentUser?.displayName} </h5>
+            )}
 
-          <Switch/>
+            <Switch />
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>

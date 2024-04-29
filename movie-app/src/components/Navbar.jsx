@@ -17,15 +17,15 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className="bg-neutral-100 dark:bg-gray-900 py-3 dark:text-white fixed w-full top-0 z-20"
+      className="bg-blue-main dark:bg-blue-main py-3 dark:text-white fixed w-full top-0 z-20"
     >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between">
-          <Link to="/" className="pr-2 text-2xl font-semibold">
+          <Link to="/" className="pr-2 text-2xl font-semibold ">
             The Movie App
           </Link>
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden"></div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="absolute inset-y-0 left-0 sm:hidden"></div>
+          <div className="flex flex-1">
             <div className="flex flex-shrink-0 items-center">
               <img className="h-8 w-auto" src={applogo} alt="Your Company" />
             </div>

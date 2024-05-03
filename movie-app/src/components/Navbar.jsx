@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import applogo from "../assets/icons/movieapplogo-removebg-preview.png"
 import Switch from "./Switch";
 import avatar from "../assets/icons/avatar.png"
+import { useAuthContext } from "../context/AuthProvider";
 
 
 
@@ -12,9 +13,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const currentUser = {displayName: "Meryem Şentürk" }
-// const currentUser = false
 export default function Navbar() {
+  const { currentUser } = useAuthContext();
+  // const currentUser = {displayName: "Meryem Şentürk" }
+  // const currentUser = false
   return (
     <>
       <Disclosure

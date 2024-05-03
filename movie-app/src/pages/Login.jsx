@@ -10,6 +10,7 @@ const Login = () => {
     password: "",
   });
 
+
   const { signIn, googleProvider, forgotPassword } = useAuthContext();
 
   const handleChange = (e) =>

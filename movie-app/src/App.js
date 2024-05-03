@@ -1,15 +1,20 @@
-import './App.css';
-import AuthProvider from './context/AuthProvider';
-import AppRouter from './router/AppRouter';
+import React from "react";
+import AppRouter from "./router/AppRouter";
+import AuthProvider from "./context/AuthProvider";
+import { ToastContainer } from "react-toastify";
+import MovieProvider from "./context/MovieProvider";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className="dark:bg-gray-dark-main min-h-screen">
       <AuthProvider>
-        <AppRouter />
+        <MovieProvider>
+          <AppRouter />
+          <ToastContainer />
+        </MovieProvider>
       </AuthProvider>
     </div>
   );
-}
+};
 
 export default App;

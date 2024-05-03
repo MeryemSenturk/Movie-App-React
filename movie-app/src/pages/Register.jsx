@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import GoogleIcon from "../assets/icons/GoogleIcon";
+import { useAuthContext } from "../context/AuthProvider";
 
 const Register = () => {
   //? birleştirilmiş state
   const[info, setInfo]  = useState({firsName: "", lastName: "", email: "", password: ""})
 
+  const {createUser} = useAuthContext()
+
   const handleChange = (e) => setInfo({...info, [e.target.name]: e.target.value})
   // console.log(info);
+  const {email, password} = info
 
   const handlesubmit = (e) => {
     e.preventDefault();
+createUser(email, password);
     console.log(info);
   }
   return (
